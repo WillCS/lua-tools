@@ -18,6 +18,7 @@ task({
         end,
         function()
             os.execute("echo At least one action is required.")
+        end,
         shell("echo", "you can also directly execute on the shell using the provided function.")
     },
     action = shell("echo", "This shorthand works similarly to dependency above.")
