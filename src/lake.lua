@@ -57,7 +57,7 @@ function shell(cmd, ...)
     return function()
         io.write(command)
         io.write("\n")
-        os.execute(command)
+        return os.execute(command)
     end
 end
 
