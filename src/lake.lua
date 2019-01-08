@@ -121,7 +121,7 @@ end
 if lake.fileExists("lakefile.lua") then
     dofile("lakefile.lua")
 elseif lake.fileExists("lakefile") then
-    doFile("lakefile")
+    dofile("lakefile")
 else
     error("No lakefile found.")
 end
