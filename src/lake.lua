@@ -61,6 +61,19 @@ function shell(cmd, ...)
     end
 end
 
+function path(...)
+    local path = table.pack(...)
+    local fullPath = path[1]
+    
+    for i = 2, path.n do
+        if path[i] ~= nil then
+            fullPath = fullPath .. "/" .. path[i]
+        end
+    end
+    
+    return fullPath
+end
+
 function lake.concatArgs(args)
     local fullString = ""
     for i = 1, args.n do

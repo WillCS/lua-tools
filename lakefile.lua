@@ -3,7 +3,9 @@ task({
     dependencies = {
         "bin", "src/lake.lua"
     },
-    action = shell("luac", "-o", "bin/lake", "src/lake.lua")
+    action = shell("luac", 
+        "-o", path("bin", "lake"), 
+        path("src", "lake.lua"))
 })
 
 task({
